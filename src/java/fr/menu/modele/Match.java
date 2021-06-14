@@ -38,6 +38,7 @@ public class Match {
         return horaire;
     }
 
+
     public void setHoraire(String horaire) {
         this.horaire = horaire;
     }
@@ -62,9 +63,12 @@ public class Match {
         this.scoreEquipe2 = scoreEquipe2;
         this.isPlayed = true;
         this.isPhaseDeGroupe = true;
+        this.updatePoints();
+        this.updateNbMatchsPlayed();
+        this.updateDifferenceButs();
     }
-    
-        public Match(Stade stade, String date, String horaire) {
+
+    public Match(Stade stade, String date, String horaire) {
         this.stade = stade;
         this.date = date;
         this.horaire = horaire;
@@ -120,12 +124,33 @@ public class Match {
         this.date = date;
     }
 
-    public boolean isIsPlayed() {
+    public boolean getIsPlayed() {
         return isPlayed;
     }
 
-    public void setIsPlayed(boolean isPlayed) {
-        this.isPlayed = isPlayed;
-    }
 
+
+    public void updatePoints() {
+        if (scoreEquipe1 > scoreEquipe2) {
+            equipe1.setNbPoints(3);
+        } else {
+            if (scoreEquipe1 == scoreEquipe2) {
+                equipe1.setNbPoints(1);
+                equipe2.setNbPoints(1);
+            } else {
+                equipe2.setNbPoints(3);
+            }
+        }
+    }
+    
+    public void updateNbMatchsPlayed() {
+        equipe1.updateNbMatchsPlayed();
+        equipe2.updateNbMatchsPlayed();
+    }
+    
+    public void updateDifferenceButs() {
+        equipe1.updateDifferenceButs(scoreEquipe1, scoreEquipe2);
+        equipe2.updateDifferenceButs(scoreEquipe2, scoreEquipe1);
+    }
+    
 }

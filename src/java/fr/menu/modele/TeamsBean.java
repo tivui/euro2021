@@ -31,30 +31,30 @@ public class TeamsBean {
 
         //instanciation des objets Equipe
         
-        Equipe france = new Equipe("France", "FR.png");
-        Equipe allemagne = new Equipe("Allemagne", "DE.png");
-        Equipe portugal = new Equipe("Portugal", "PT.png");
-        Equipe hongrie = new Equipe("Hongrie", "HU.png");
-        Equipe italie = new Equipe("Italie", "IT.png");
-        Equipe paysDeGalles = new Equipe("Pays de Galles", "_wales.png");
-        Equipe suisse = new Equipe("Suisse", "CH.png");
-        Equipe turquie = new Equipe("Turquie", "TR.png");
-        Equipe danemark = new Equipe("Danemark", "DK.png");
-        Equipe finlande = new Equipe("Finlande", "FI.png");
-        Equipe russie = new Equipe("Russie", "RU.png");
-        Equipe belgique = new Equipe("Belgique", "BE.png");
-        Equipe ukraine = new Equipe("Ukraine", "UA.png");
-        Equipe paysBas = new Equipe("Pays Bas", "NL.png");
-        Equipe autriche = new Equipe("Autriche", "AT.png");
-        Equipe macedoineDuNord = new Equipe("Macédoine du Nord", "MK.png");
-        Equipe angleterre = new Equipe("Angleterre", "_england.png");
-        Equipe croatie = new Equipe("Croatie", "HR.png");
-        Equipe ecosse = new Equipe("Ecosse", "_scotland.png");
-        Equipe republiqueTcheque = new Equipe("République Tchèque", "CZ.png");
-        Equipe suede = new Equipe("Suède", "SE.png");
-        Equipe pologne = new Equipe("Pologne", "PL.png");
-        Equipe espagne = new Equipe("Espagne", "ES.png");
-        Equipe slovaquie = new Equipe("Slovaquie", "SK.png");
+        Equipe france = new Equipe("France", "FR.png", "F");
+        Equipe allemagne = new Equipe("Allemagne", "DE.png", "F");
+        Equipe portugal = new Equipe("Portugal", "PT.png", "F");
+        Equipe hongrie = new Equipe("Hongrie", "HU.png", "F");
+        Equipe italie = new Equipe("Italie", "IT.png", "A");
+        Equipe paysDeGalles = new Equipe("Pays de Galles", "_wales.png", "A");
+        Equipe suisse = new Equipe("Suisse", "CH.png", "A");
+        Equipe turquie = new Equipe("Turquie", "TR.png", "A");
+        Equipe danemark = new Equipe("Danemark", "DK.png", "B");
+        Equipe finlande = new Equipe("Finlande", "FI.png", "B");
+        Equipe russie = new Equipe("Russie", "RU.png", "B");
+        Equipe belgique = new Equipe("Belgique", "BE.png", "B");
+        Equipe ukraine = new Equipe("Ukraine", "UA.png", "C");
+        Equipe paysBas = new Equipe("Pays Bas", "NL.png", "C");
+        Equipe autriche = new Equipe("Autriche", "AT.png", "C");
+        Equipe macedoineDuNord = new Equipe("Macédoine du Nord", "MK.png", "C");
+        Equipe angleterre = new Equipe("Angleterre", "_england.png", "D");
+        Equipe croatie = new Equipe("Croatie", "HR.png", "D");
+        Equipe ecosse = new Equipe("Ecosse", "_scotland.png", "D");
+        Equipe republiqueTcheque = new Equipe("République Tchèque", "CZ.png", "D");
+        Equipe suede = new Equipe("Suède", "SE.png", "E");
+        Equipe pologne = new Equipe("Pologne", "PL.png", "E");
+        Equipe espagne = new Equipe("Espagne", "ES.png", "E");
+        Equipe slovaquie = new Equipe("Slovaquie", "SK.png", "E");
         
         // stockage des équipes dans une liste
         
