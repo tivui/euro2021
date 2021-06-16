@@ -25,7 +25,10 @@
     </head>
     <body>
         <%@ include file="entete.jsp" %>
-        <jsp:useBean id="equipes" scope="page" class="fr.menu.modele.TeamsBean"> </jsp:useBean>
+        <%
+                        TeamsBean equipes;
+                        equipes = (TeamsBean) application.getAttribute("equipes");
+        %>
 
             <h1>Bienvenue <%= session.getAttribute("userName")%> sur l'application Euro 2021</h1>
 

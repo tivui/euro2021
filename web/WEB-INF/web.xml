@@ -8,6 +8,10 @@
         <filter-name>AuthentificationFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>fr.menu.AppliListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>About</servlet-name>
         <servlet-class>fr.menu.About</servlet-class>
@@ -15,10 +19,6 @@
     <servlet>
         <servlet-name>EnTete</servlet-name>
         <servlet-class>fr.menu.EnTete</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>Menu</servlet-name>
-        <servlet-class>fr.menu.Menu</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Profil</servlet-name>
@@ -33,8 +33,16 @@
         <servlet-class>fr.menu.session.LogoutServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>Groupes</servlet-name>
+        <servlet-class>fr.menu.Groupes</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Matchs</servlet-name>
         <servlet-class>fr.menu.Matchs</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Menu</servlet-name>
+        <servlet-class>fr.menu.Menu</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>About</servlet-name>
@@ -43,10 +51,6 @@
     <servlet-mapping>
         <servlet-name>EnTete</servlet-name>
         <url-pattern>/enTete</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Menu</servlet-name>
-        <url-pattern>/menu</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Profil</servlet-name>
@@ -61,8 +65,16 @@
         <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>Groupes</servlet-name>
+        <url-pattern>/groupes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Matchs</servlet-name>
         <url-pattern>/matchs</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

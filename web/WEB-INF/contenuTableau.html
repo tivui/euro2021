@@ -1,0 +1,14 @@
+<c:set var="count" value="${count + 1}" scope="page"/>
+<tr>
+    <th scope="row">${count}</th>
+    <td><img src="./img/flags/${equipe.flagName}" height="25"/></td>
+    <td>${equipe.country}</td>
+    <td>${equipe.nbMatchsPlayed}</td>
+    <td>${equipe.nbMatchsWon}</td>
+    <td>${equipe.nbMatchsDraw}</td>
+    <td>${equipe.nbMatchsLost}</td>
+    <td>${equipe.nbButsPour}</td>
+    <td>${equipe.nbButsContre}</td>
+    <td>${equipe.diffButs}</td>
+    <th>${equipe.nbPoints}</th>
+</tr>

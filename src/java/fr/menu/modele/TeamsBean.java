@@ -14,8 +14,9 @@ import java.util.HashMap;
  */
 public class TeamsBean {
 
-    public HashMap<String, Equipe> equipesMap;
+    public static HashMap<String, Equipe> equipesMap;
     public ArrayList<Equipe> equipesListe;
+    public static ArrayList<Equipe> equipesClassementListe;
     private String titre;
 
     public String getTitre() {
@@ -112,6 +113,8 @@ public class TeamsBean {
         equipesMap.put("espagne", espagne);
         equipesMap.put("slovaquie", slovaquie);
         equipesMap.put("pologne", pologne);
+        
+        this.equipesClassementListe = new ArrayList<>();
     }
 
     public HashMap<String, Equipe> getEquipesMap() {
@@ -129,6 +132,17 @@ public class TeamsBean {
     public void setEquipesListe(ArrayList<Equipe> equipesListe) {
         this.equipesListe = equipesListe;
     }
+
+    public ArrayList<Equipe> getEquipesClassementListe() {
+        return equipesClassementListe;
+    }
+
+    public void setEquipesClassementListe(ArrayList<Equipe> equipesClassementListe) {
+        this.equipesClassementListe = equipesClassementListe;
+    }
+
+
+    
 
     @Override
     public String toString() {

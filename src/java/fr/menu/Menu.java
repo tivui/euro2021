@@ -24,7 +24,6 @@ public class Menu extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("equipes", teamsBean);
         this.getServletContext().getRequestDispatcher("/WEB-INF/menu.jsp").forward(request, response);
     }
 
@@ -74,10 +73,5 @@ public class Menu extends HttpServlet {
      * @Instancie un objet teamsBean
      */
     
-     @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        this.teamsBean = new TeamsBean();
-    }
 
 }

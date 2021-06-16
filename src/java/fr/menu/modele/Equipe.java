@@ -18,8 +18,13 @@ public class Equipe implements Serializable  {
     private String flagName;
     private String groupe;
     private int nbPoints;
+    private int nbButsPour;
+    private int nbButsContre;
     private int diffButs;
     private int nbMatchsPlayed;
+    private int nbMatchsWon;
+    private int nbMatchsDraw;
+    private int nbMatchsLost;
     
 
     public Equipe() {
@@ -92,11 +97,77 @@ public class Equipe implements Serializable  {
         this.diffButs = diffButs;
     }
     
-    public void updateNbMatchsPlayed() {
+    public void updateNbMatchs(int scoreEquipe, int scoreAdversaire) {
         this.nbMatchsPlayed++;
+        if (scoreEquipe < scoreAdversaire) {
+            this.nbMatchsLost++;
+        } else {
+            if (scoreEquipe == scoreAdversaire) {
+                this.nbMatchsDraw++;
+            } else {
+                this.nbMatchsWon++;
+            }
+        }
+    }
+    
+    public void updateNombreButs(int ButsPour, int ButsContre) {
+        this.nbButsPour += ButsPour;
+        this.nbButsContre += ButsContre;
+    }
+    
+    public void updateNombrePoints(int scoreEquipe, int scoreAdversaire) {
+        if (scoreEquipe > scoreAdversaire) {
+            this.nbPoints += 3;
+        } else {
+            if (scoreEquipe == scoreAdversaire) {
+                this.nbPoints += 1;
+            } 
+        }
     }
     
     public void updateDifferenceButs(int butsEnPlus, int butsEnMoins) {
         this.diffButs += (butsEnPlus - butsEnMoins);
     }
+
+    public int getNbButsPour() {
+        return nbButsPour;
+    }
+
+    public void setNbButsPour(int nbButsPour) {
+        this.nbButsPour = nbButsPour;
+    }
+
+    public int getNbButsContre() {
+        return nbButsContre;
+    }
+
+    public void setNbButsContre(int nbButsContre) {
+        this.nbButsContre = nbButsContre;
+    }
+
+    public int getNbMatchsWon() {
+        return nbMatchsWon;
+    }
+
+    public void setNbMatchsWon(int nbMatchsWon) {
+        this.nbMatchsWon = nbMatchsWon;
+    }
+
+    public int getNbMatchsDraw() {
+        return nbMatchsDraw;
+    }
+
+    public void setNbMatchsDraw(int nbMatchsDraw) {
+        this.nbMatchsDraw = nbMatchsDraw;
+    }
+
+    public int getNbMatchsLost() {
+        return nbMatchsLost;
+    }
+
+    public void setNbMatchsLost(int nbMatchsLost) {
+        this.nbMatchsLost = nbMatchsLost;
+    }
+    
+    
 }

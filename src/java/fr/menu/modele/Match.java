@@ -11,7 +11,7 @@ import java.util.HashMap;
  *
  * @author stag
  */
-public class Match {
+public final class Match {
 
     private Stade stade;
     private String date;
@@ -38,7 +38,6 @@ public class Match {
         return horaire;
     }
 
-
     public void setHoraire(String horaire) {
         this.horaire = horaire;
     }
@@ -64,8 +63,9 @@ public class Match {
         this.isPlayed = true;
         this.isPhaseDeGroupe = true;
         this.updatePoints();
-        this.updateNbMatchsPlayed();
+        this.updateNbMatchs();
         this.updateDifferenceButs();
+        this.updateNombreButs();
     }
 
     public Match(Stade stade, String date, String horaire) {
@@ -128,29 +128,24 @@ public class Match {
         return isPlayed;
     }
 
-
-
     public void updatePoints() {
-        if (scoreEquipe1 > scoreEquipe2) {
-            equipe1.setNbPoints(3);
-        } else {
-            if (scoreEquipe1 == scoreEquipe2) {
-                equipe1.setNbPoints(1);
-                equipe2.setNbPoints(1);
-            } else {
-                equipe2.setNbPoints(3);
-            }
-        }
+        equipe1.updateNombrePoints(scoreEquipe1, scoreEquipe2);
+        equipe2.updateNombrePoints(scoreEquipe2, scoreEquipe1);
     }
-    
-    public void updateNbMatchsPlayed() {
-        equipe1.updateNbMatchsPlayed();
-        equipe2.updateNbMatchsPlayed();
+
+    public void updateNombreButs() {
+        equipe1.updateNombreButs(scoreEquipe1, scoreEquipe2);
+        equipe2.updateNombreButs(scoreEquipe2, scoreEquipe1);
     }
-    
+
+    public void updateNbMatchs() {
+        equipe1.updateNbMatchs(scoreEquipe1, scoreEquipe2);
+        equipe2.updateNbMatchs(scoreEquipe1, scoreEquipe2);
+    }
+
     public void updateDifferenceButs() {
         equipe1.updateDifferenceButs(scoreEquipe1, scoreEquipe2);
         equipe2.updateDifferenceButs(scoreEquipe2, scoreEquipe1);
     }
-    
+
 }

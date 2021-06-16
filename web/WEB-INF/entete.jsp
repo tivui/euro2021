@@ -20,6 +20,7 @@
                 </div>
                 <div class="right_bloc">
                     <a href="matchs"><button class="btn btn-light buttonMyStyle">Matchs</button></a>
+                    <a href="groupes"><button class="btn btn-light buttonMyStyle">Groupes</button></a>
                     <a href="profil"><button class="btn btn-light buttonMyStyle">Profil</button></a>
                     <a href="about"><button class="btn btn-light buttonMyStyle">A propos</button></a>
                     <a href="LogoutServlet"><button class="btn btn-light buttonMyStyle">Déconnexion</button></a>
