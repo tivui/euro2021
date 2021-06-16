@@ -93,7 +93,7 @@ public class MatchsBean {
         Match match07 = new Match(amsterdam,"Dim. 13/06", horairesMap.get(3), paysBas, ukraine, 3, 2);
         Match match08 = new Match(glasgow,"Lun. 14/06", horairesMap.get(1), ecosse, republiqueTcheque, 0, 2);
         Match match09 = new Match(stPetersbourg,"Lun. 14/06", horairesMap.get(2), pologne, slovaquie, 1, 2);
-        Match match10 = new Match(seville,"Lun. 14/06", horairesMap.get(3), espagne, suede);
+        Match match10 = new Match(seville,"Lun. 14/06", horairesMap.get(3), espagne, suede, 0, 0);
         Match match11 = new Match(budapest,"Mar. 15/06", horairesMap.get(2), hongrie, portugal);
         Match match12 = new Match(munich,"Mar. 15/06", horairesMap.get(3), france, allemagne);
         Match match13 = new Match(stPetersbourg,"Mer. 16/06", horairesMap.get(1), finlande, russie);
