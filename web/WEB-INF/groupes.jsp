@@ -24,7 +24,6 @@
         <%@ include file="entete.jsp" %>
         <%
             TeamsBean equipes = (TeamsBean) application.getAttribute("equipes");
-            Collections.sort(equipes.equipesClassementListe, new ClassementComparator());
 
         %>
         <h1>Groupes et classements</h1>

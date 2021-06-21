@@ -140,7 +140,7 @@ public final class Match {
 
     public void updateNbMatchs() {
         equipe1.updateNbMatchs(scoreEquipe1, scoreEquipe2);
-        equipe2.updateNbMatchs(scoreEquipe1, scoreEquipe2);
+        equipe2.updateNbMatchs(scoreEquipe2, scoreEquipe1);
     }
 
     public void updateDifferenceButs() {

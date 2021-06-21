@@ -7,6 +7,7 @@ package fr.menu.modele;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -17,6 +18,8 @@ public class TeamsBean {
     public static HashMap<String, Equipe> equipesMap;
     public ArrayList<Equipe> equipesListe;
     public static ArrayList<Equipe> equipesClassementListe;
+    public static HashMap<String, List<Equipe>> equipesClassementParGroupesMap;
+    public static ArrayList<Equipe> classement3emesListe;
     private String titre;
 
     public String getTitre() {
@@ -114,7 +117,10 @@ public class TeamsBean {
         equipesMap.put("slovaquie", slovaquie);
         equipesMap.put("pologne", pologne);
         
+        //instanciation des listes et map de classement
         this.equipesClassementListe = new ArrayList<>();
+        this.equipesClassementParGroupesMap = new HashMap<String, List<Equipe>>();
+        this.classement3emesListe = new ArrayList<>();
     }
 
     public HashMap<String, Equipe> getEquipesMap() {

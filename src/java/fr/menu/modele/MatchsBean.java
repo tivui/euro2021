@@ -6,7 +6,10 @@
 package fr.menu.modele;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -55,21 +58,21 @@ public class MatchsBean {
 
         //création des équipes de la Map, c'est dans cette Map que seront stockés les points
         equipes = new TeamsBean();
-        Equipe france = equipes.equipesMap.get("france");
-        Equipe allemagne = equipes.equipesMap.get("allemagne");
-        Equipe portugal = equipes.equipesMap.get("portugal");
-        Equipe hongrie = equipes.equipesMap.get("hongrie");
-        Equipe italie = equipes.equipesMap.get("italie");
-        Equipe paysDeGalles = equipes.equipesMap.get("paysDeGalles");
-        Equipe suisse = equipes.equipesMap.get("suisse");
-        Equipe turquie = equipes.equipesMap.get("turquie");
-        Equipe danemark = equipes.equipesMap.get("danemark");
-        Equipe finlande = equipes.equipesMap.get("finlande");
-        Equipe russie = equipes.equipesMap.get("russie");
-        Equipe belgique = equipes.equipesMap.get("belgique");
-        Equipe ukraine = equipes.equipesMap.get("ukraine");
-        Equipe paysBas = equipes.equipesMap.get("paysBas");
-        Equipe autriche = equipes.equipesMap.get("autriche");
+        Equipe france = TeamsBean.equipesMap.get("france");
+        Equipe allemagne = TeamsBean.equipesMap.get("allemagne");
+        Equipe portugal = TeamsBean.equipesMap.get("portugal");
+        Equipe hongrie = TeamsBean.equipesMap.get("hongrie");
+        Equipe italie = TeamsBean.equipesMap.get("italie");
+        Equipe paysDeGalles = TeamsBean.equipesMap.get("paysDeGalles");
+        Equipe suisse = TeamsBean.equipesMap.get("suisse");
+        Equipe turquie = TeamsBean.equipesMap.get("turquie");
+        Equipe danemark = TeamsBean.equipesMap.get("danemark");
+        Equipe finlande = TeamsBean.equipesMap.get("finlande");
+        Equipe russie = TeamsBean.equipesMap.get("russie");
+        Equipe belgique = TeamsBean.equipesMap.get("belgique");
+        Equipe ukraine = TeamsBean.equipesMap.get("ukraine");
+        Equipe paysBas = TeamsBean.equipesMap.get("paysBas");
+        Equipe autriche = TeamsBean.equipesMap.get("autriche");
         Equipe macedoineDuNord = TeamsBean.equipesMap.get("macedoineDuNord");
         Equipe angleterre = TeamsBean.equipesMap.get("angleterre");
         Equipe croatie = TeamsBean.equipesMap.get("croatie");
@@ -96,6 +99,27 @@ public class MatchsBean {
         Match match13 = new Match(stPetersbourg, "Mer. 16/06", horairesMap.get(1), finlande, russie, 0, 1);
         Match match14 = new Match(bakou, "Mer. 16/06", horairesMap.get(2), turquie, paysDeGalles, 0, 2);
         Match match15 = new Match(rome, "Mer. 16/06", horairesMap.get(3), italie, suisse, 3, 0);
+        Match match16 = new Match(bucarest, "Jeu. 17/06", horairesMap.get(1), ukraine, macedoineDuNord, 2, 1);
+        Match match17 = new Match(copenhague, "Jeu. 17/06", horairesMap.get(2), danemark, belgique, 1, 2);
+        Match match18 = new Match(amsterdam, "Jeu. 17/06", horairesMap.get(3), paysBas, autriche, 2, 0);
+        Match match19 = new Match(stPetersbourg, "Ven. 18/06", horairesMap.get(1), suede, slovaquie, 1, 0);
+        Match match20 = new Match(glasgow, "Ven. 18/06", horairesMap.get(2), croatie, republiqueTcheque, 1, 1);
+        Match match21 = new Match(londres, "Ven. 18/06", horairesMap.get(3), angleterre, ecosse, 0, 0);
+        Match match22 = new Match(budapest, "Sam. 19/06", horairesMap.get(1), hongrie, france);
+        Match match23 = new Match(munich, "Sam. 19/06", horairesMap.get(2), portugal, allemagne);
+        Match match24 = new Match(seville, "Sam. 19/06", horairesMap.get(3), espagne, pologne);
+        Match match25 = new Match(rome, "Dim. 20/06", horairesMap.get(2), italie, paysDeGalles);
+        Match match26 = new Match(bakou, "Dim. 20/06", horairesMap.get(2), suisse, turquie);
+        Match match27 = new Match(bucarest, "Lun. 21/06", horairesMap.get(2), ukraine, autriche);
+        Match match28 = new Match(amsterdam, "Lun. 21/06", horairesMap.get(2), macedoineDuNord, paysBas);
+        Match match29 = new Match(copenhague, "Lun. 21/06", horairesMap.get(3), russie, danemark);
+        Match match30 = new Match(stPetersbourg, "Lun. 21/06", horairesMap.get(3), finlande, belgique);
+        Match match31 = new Match(glasgow, "Mar. 22/06", horairesMap.get(3), croatie, ecosse);
+        Match match32 = new Match(londres, "Mar. 22/06", horairesMap.get(3), republiqueTcheque, angleterre);
+        Match match33 = new Match(stPetersbourg, "Mer. 23/06", horairesMap.get(2), suede, pologne);
+        Match match34 = new Match(seville, "Mer. 23/06", horairesMap.get(2), slovaquie, espagne);
+        Match match35 = new Match(budapest, "Mer. 23/06", horairesMap.get(3), portugal, france);
+        Match match36 = new Match(munich, "Mer. 23/06", horairesMap.get(3), allemagne, hongrie);
 
         //stockage des matchs
         matchsMap = new HashMap<>();
@@ -114,9 +138,29 @@ public class MatchsBean {
         matchsMap.put(13, match13);
         matchsMap.put(14, match14);
         matchsMap.put(15, match15);
+        matchsMap.put(16, match16);
+        matchsMap.put(17, match17);
+        matchsMap.put(18, match18);
+        matchsMap.put(19, match19);
+        matchsMap.put(20, match20);
+        matchsMap.put(21, match21);
+        matchsMap.put(22, match22);
+        matchsMap.put(23, match23);
+        matchsMap.put(24, match24);
+        matchsMap.put(25, match25);
+        matchsMap.put(26, match26);
+        matchsMap.put(27, match27);
+        matchsMap.put(28, match28);
+        matchsMap.put(29, match29);
+        matchsMap.put(30, match30);
+        matchsMap.put(31, match31);
+        matchsMap.put(32, match32);
+        matchsMap.put(33, match33);
+        matchsMap.put(34, match34);
+        matchsMap.put(35, match35);
+        matchsMap.put(36, match36);
 
         //stockage Equipes dans la liste Classement
-        TeamsBean.equipesClassementListe = new ArrayList<>();
         equipes.equipesClassementListe.add(portugal);
         equipes.equipesClassementListe.add(hongrie);
         equipes.equipesClassementListe.add(italie);
@@ -141,6 +185,189 @@ public class MatchsBean {
         equipes.equipesClassementListe.add(france);
         equipes.equipesClassementListe.add(allemagne);
         equipes.equipesClassementListe.add(slovaquie);
+
+        //Tri des équipes par points et différence de buts
+        Collections.sort(equipes.equipesClassementListe, new ClassementComparator());
+
+        //stockage dans une Hashmap de liste d'équipes triées par groupe et classées
+        String[] groupesTab = {"A", "B", "C", "D", "E", "F"};
+        for (String groupe : groupesTab) {
+            equipes.equipesClassementParGroupesMap.put(groupe, new ArrayList<>());
+            for (Equipe equipe : equipes.equipesClassementListe) {
+                if (equipe.getGroupe().equals(groupe)) {
+                    equipes.equipesClassementParGroupesMap.get(groupe).add(equipe);
+                }
+            }
+        }
+
+        //affichage test des classements par groupe
+        for (HashMap.Entry<String, List<Equipe>> entry : equipes.equipesClassementParGroupesMap.entrySet()) {
+            System.out.println("Groupe " + entry.getKey());
+            for (Equipe equipe : entry.getValue()) {
+                System.out.println(equipe.getCountry());
+            }
+        }
+
+        //stockage dans une arraylist des 3èmes de groupe
+        for (HashMap.Entry<String, List<Equipe>> entry : equipes.equipesClassementParGroupesMap.entrySet()) {
+            equipes.classement3emesListe.add(entry.getValue().get(2));
+        }
+
+        //tri des 3èmes
+        Collections.sort(equipes.classement3emesListe, new ClassementComparator());
+
+        //Affichage test des 3èmes de groupes
+        for (Equipe equipe : equipes.classement3emesListe) {
+            System.out.println(equipe);
+        }
+
+        //Générer une liste des groupes des 4 meilleurs troisièmes
+        String[] meilleurs3emesListeGroupes = new String[4];
+        for (int i = 0; i < 4; i++) {
+            meilleurs3emesListeGroupes[i] = equipes.classement3emesListe.get(i).getGroupe();
+        }
+
+        //Affichage de la liste des groupes des meilleurs troisièmes
+        for (String groupe : meilleurs3emesListeGroupes) {
+            System.out.println(groupe);
+        }
+
+        //Répartition des meilleurs 3èmes
+        String best3liste[] = meilleurs3emesListeGroupes;
+        Equipe best3_1B = null, best3_1C = null, best3_1E = null, best3_1F = new Equipe();
+
+        if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("D")) {
+            best3_1B = equipes.equipesClassementParGroupesMap.get("A").get(2);
+            best3_1C = equipes.equipesClassementParGroupesMap.get("D").get(2);
+            best3_1E = equipes.equipesClassementParGroupesMap.get("E").get(2);
+            best3_1F = equipes.equipesClassementParGroupesMap.get("F").get(2);
+        } else {
+            if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("E")) {
+                best3_1B = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                best3_1C = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                best3_1E = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                best3_1F = equipes.equipesClassementParGroupesMap.get("C").get(2);
+            } else {
+                if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("F")) {
+                    best3_1B = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                    best3_1C = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                    best3_1E = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                    best3_1F = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                } else {
+                    if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("E")) {
+                        best3_1B = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                        best3_1C = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                        best3_1E = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                        best3_1F = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                    } else {
+                        if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("F")) {
+                            best3_1B = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                            best3_1C = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                            best3_1E = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                            best3_1F = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                        } else {
+                            if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("E") && Arrays.asList(best3liste).contains("F")) {
+                                best3_1B = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                best3_1C = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                best3_1E = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                                best3_1F = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                            } else {
+                                if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("E")) {
+                                    best3_1B = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                    best3_1C = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                    best3_1E = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                    best3_1F = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                                } else {
+                                    if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("F")) {
+                                        best3_1B = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                        best3_1C = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                        best3_1E = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                        best3_1F = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                                    } else {
+                                        if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("E") && Arrays.asList(best3liste).contains("F")) {
+                                            best3_1B = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                            best3_1C = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                            best3_1E = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                            best3_1F = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                                        } else {
+                                            if (Arrays.asList(best3liste).contains("A") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("E") && Arrays.asList(best3liste).contains("F")) {
+                                                best3_1B = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                                best3_1C = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                                best3_1E = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                                best3_1F = equipes.equipesClassementParGroupesMap.get("A").get(2);
+                                            } else {
+                                                if (Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("E")) {
+                                                    best3_1B = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                                    best3_1C = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                                    best3_1E = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                                                    best3_1F = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                                } else {
+                                                    if (Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("F")) {
+                                                        best3_1B = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                                        best3_1C = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                                        best3_1E = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                                        best3_1F = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                                                    } else {
+                                                        if (Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("E") && Arrays.asList(best3liste).contains("F")) {
+                                                            best3_1B = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                                            best3_1C = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                                            best3_1E = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                                            best3_1F = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                                                        } else {
+                                                            if (Arrays.asList(best3liste).contains("B") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("E") && Arrays.asList(best3liste).contains("F")) {
+                                                                best3_1B = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                                                best3_1C = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                                                best3_1E = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                                                best3_1F = equipes.equipesClassementParGroupesMap.get("B").get(2);
+                                                            } else {
+                                                                if (Arrays.asList(best3liste).contains("C") && Arrays.asList(best3liste).contains("D") && Arrays.asList(best3liste).contains("E") && Arrays.asList(best3liste).contains("F")) {
+                                                                    best3_1B = equipes.equipesClassementParGroupesMap.get("F").get(2);
+                                                                    best3_1C = equipes.equipesClassementParGroupesMap.get("E").get(2);
+                                                                    best3_1E = equipes.equipesClassementParGroupesMap.get("D").get(2);
+                                                                    best3_1F = equipes.equipesClassementParGroupesMap.get("C").get(2);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Génération des matchs de 8èmes de finale
+        HashMap<String, List<Equipe>> classMap = equipes.equipesClassementParGroupesMap;
+        //1er du groupe A contre le 2ème du groupe C
+        Match match37 = new Match(londres, "Sam. 26/06", horairesMap.get(2), classMap.get("A").get(0), classMap.get("C").get(1));
+        matchsMap.put(37, match37);
+        //2ème du groupe A contre le 2ème du groupe B
+        Match match38 = new Match(amsterdam, "Sam. 26/06", horairesMap.get(3), classMap.get("A").get(1), classMap.get("B").get(1));
+        matchsMap.put(38, match38);
+        //1er du groupe B contre le meilleur 3ème 1B
+        Match match39 = new Match(seville, "Dim. 27/06", horairesMap.get(2), classMap.get("B").get(0), best3_1B);
+        matchsMap.put(39, match39);
+        //1er du groupe C contre le meilleur 3ème 1C
+        Match match40 = new Match(budapest, "Dim. 27/06", horairesMap.get(3), classMap.get("C").get(0), best3_1C);
+        matchsMap.put(40, match40);
+        //2ème du groupe D contre le 2ème du groupe E
+        Match match41 = new Match(copenhague, "Lun. 28/06", horairesMap.get(2), classMap.get("D").get(1), classMap.get("E").get(1));
+        matchsMap.put(41, match41);
+        //1er du groupe F contre le meilleur 3ème 1F
+        Match match42 = new Match(bucarest, "Lun. 28/06", horairesMap.get(3), classMap.get("F").get(0), best3_1F);
+        matchsMap.put(42, match42);
+        //1er du groupe D contre le 2ème du groupe F
+        Match match43 = new Match(londres, "Mar. 29/06", horairesMap.get(2), classMap.get("D").get(0), classMap.get("F").get(1));
+        matchsMap.put(43, match43);
+        //1er du groupe E contre le meilleur 3ème 1E
+        Match match44 = new Match(glasgow, "Mar. 29/06", horairesMap.get(3), classMap.get("E").get(0), best3_1E);
+        matchsMap.put(44, match44);
+        
 
     }
 

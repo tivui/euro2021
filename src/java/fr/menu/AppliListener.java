@@ -17,7 +17,6 @@ import javax.servlet.ServletContextListener;
  * @author stag
  */
 public class AppliListener implements ServletContextListener {
-
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         ServletContext ctx = servletContextEvent.getServletContext();

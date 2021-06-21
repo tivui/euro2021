@@ -20,20 +20,28 @@
     </head>
     <body>
         <%@ include file="entete.jsp" %>
-                <%
-                        MatchsBean matchs = (MatchsBean) application.getAttribute("matchs");
-                 %>
+        <%
+            MatchsBean matchs = (MatchsBean) application.getAttribute("matchs");
+        %>
 
-            <h1>Matchs</h1>
+        <h1>Matchs</h1>
 
-            <div class="container">
-                <div class="row">
+        <div class="container">
+            <div class="row">
                 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                 <c:forEach items="${matchs.matchsMap}" var="entry">
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="match">
                             <div class="equipes">
-                                <p class="titreMatch"> Match n°${entry.key} </p>
+                                <c:choose>
+                                    <c:when test="${entry.key<37}">
+                                        <p class="titreMatch"> Match n°${entry.key} </p>
+                                    </c:when>  
+                                    <c:when test="${(entry.key>=37)&&(entry.key<=44)}">
+                                        <p class="titreMatch"> Huitième de finale n°${entry.key-36} </p>
+                                    </c:when> 
+                                </c:choose>
+
                                 <img src="./img/flags/${entry.value.equipe1.flagName}" height="25"/>
                                 ${entry.value.equipe1.country}<br>
                                 <img src="./img/flags/${entry.value.equipe2.flagName}" height="25"/>
@@ -58,7 +66,7 @@
                                 <p> <b>Ville </b>: ${entry.value.stade.ville} </p>
                                 <p> <b>Nom du stade </b>: ${entry.value.stade.stade} </p>
                                 <p> <b>Capacité </b>: ${entry.value.stade.capacite} personnes</p>
-                                
+
                             </div>
                         </div>
                     </div>
